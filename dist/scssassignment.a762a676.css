@@ -50,13 +50,13 @@ html, body {
   display: flex;
 }
 
-.menu > li {
+.menu > .menu__row {
   margin: 0 1rem;
   padding: 0;
   overflow: hidden;
 }
 
-.menu > li a {
+.menu > .menu__row a {
   color: #fff;
   border-bottom: 2px solid #0000;
   text-decoration: none;
@@ -148,7 +148,7 @@ html, body {
     left: 0;
   }
 
-  #menu-toggle ~ .menu li {
+  #menu-toggle ~ .menu .menu__row {
     height: 0;
     border: 0;
     margin: 0;
@@ -156,13 +156,13 @@ html, body {
     transition: height .4s cubic-bezier(.23, 1, .32, 1);
   }
 
-  #menu-toggle:checked ~ .menu li {
+  #menu-toggle:checked ~ .menu .menu__row {
     height: 2em;
     padding: .5em;
     transition: height .4s cubic-bezier(.23, 1, .32, 1);
   }
 
-  .menu > li {
+  .menu > .menu__row {
     width: 100%;
     color: #fff;
     background-color: #ffffff1a;
@@ -214,18 +214,17 @@ html, body {
     display: flex;
   }
 
-  .startpage-container header ul li {
+  .startpage-container header ul .menu__row {
     list-style: none;
   }
 
-  .startpage-container header ul li a {
+  .startpage-container header ul .menu__row a {
     color: #fff;
-    border-bottom: 2px solid #0000;
+    border-bottom: 2px solid #fff0;
     text-decoration: none;
-    transition: border .2s;
   }
 
-  .startpage-container header ul li a:hover {
+  .startpage-container header ul .menu__row a:hover {
     cursor: pointer;
     border-color: #fff;
   }
@@ -248,7 +247,7 @@ html, body {
   display: flex;
 }
 
-.startpage-container .frontpage .frontpage__text .headline-text {
+.startpage-container .frontpage .frontpage__text .frontpage__headline {
   margin: 7%;
   font-size: 1.5rem;
 }
@@ -258,7 +257,7 @@ html, body {
   text-align: center;
 }
 
-.startpage-container .frontpage .btn--container {
+.startpage-container .frontpage .btn {
   height: 10vh;
   width: 100vw;
   justify-content: center;
@@ -266,12 +265,12 @@ html, body {
   display: flex;
 }
 
-.startpage-container .frontpage .btn--container .fa-circle-down {
+.startpage-container .frontpage .btn .fa-circle-down {
   color: #fff;
   font-size: 1.2rem;
 }
 
-.startpage-container .frontpage .btn--container .fa-circle-down:hover {
+.startpage-container .frontpage .btn .fa-circle-down:hover {
   cursor: pointer;
 }
 
@@ -284,7 +283,7 @@ html, body {
   display: flex;
 }
 
-.aboutus .info {
+.aboutus .team {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -292,12 +291,12 @@ html, body {
 }
 
 @media screen and (min-width: 768px) {
-  .aboutus .info {
+  .aboutus .team {
     flex-flow: wrap;
   }
 }
 
-.aboutus .info .intro {
+.aboutus .team .teammember {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -306,13 +305,13 @@ html, body {
 }
 
 @media screen and (min-width: 768px) {
-  .aboutus .info .intro {
+  .aboutus .team .teammember {
     width: 50%;
     padding: 2%;
   }
 }
 
-.aboutus .info article {
+.aboutus .team .teammember__description {
   text-align: justify;
   background-color: #d3d3d3;
   border-radius: 5px;
@@ -322,23 +321,23 @@ html, body {
 }
 
 @media screen and (min-width: 1200px) {
-  .aboutus .info article {
+  .aboutus .team .teammember__description {
     font-size: 1rem;
   }
 }
 
-.aboutus .info article .fa-quote-right {
+.aboutus .team .teammember__description .fa-quote-right {
   font-size: 2rem;
   display: inline;
 }
 
 @media screen and (min-width: 1200px) {
-  .aboutus .info article .fa-quote-right {
+  .aboutus .team .teammember__description .fa-quote-right {
     font-size: 2.3rem;
   }
 }
 
-.aboutus .btn--container {
+.aboutus .btn {
   height: 10vh;
   width: 100vw;
   justify-content: center;
@@ -346,13 +345,13 @@ html, body {
   display: flex;
 }
 
-.aboutus .btn--container .fa-circle-down {
+.aboutus .btn .fa-circle-down {
   color: #fff;
   color: #000;
   font-size: 1.2rem;
 }
 
-.aboutus .btn--container .fa-circle-down:hover {
+.aboutus .btn .fa-circle-down:hover {
   cursor: pointer;
 }
 
@@ -362,7 +361,7 @@ html, body {
   background-color: #000;
 }
 
-.lastpage .contact-info {
+.lastpage .contactinfo {
   width: 100vw;
   flex-direction: column;
   justify-content: center;
@@ -372,42 +371,42 @@ html, body {
 }
 
 @media screen and (min-width: 768px) {
-  .lastpage .contact-info {
+  .lastpage .contactinfo {
     height: 25vh;
     flex-direction: row;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .lastpage .contact-info {
+  .lastpage .contactinfo {
     height: 15vh;
   }
 }
 
-.lastpage .contact-info section {
+.lastpage .contactinfo section.contactinfo__address {
   width: 60vw;
   text-align: left;
   margin: 5%;
 }
 
 @media screen and (min-width: 768px) {
-  .lastpage .contact-info section {
+  .lastpage .contactinfo section.contactinfo__address {
     height: 10vh;
     margin-bottom: 10%;
     padding: 0;
   }
 }
 
-.lastpage .contact-info section p {
+.lastpage .contactinfo section.contactinfo__address .contactinfo__address--row {
   margin: 3%;
 }
 
-.lastpage .contact-info section p a {
+.lastpage .contactinfo section.contactinfo__address .contactinfo__address--row a {
   color: #fff;
   text-decoration: none;
 }
 
-.lastpage .contact-info section p a i {
+.lastpage .contactinfo section.contactinfo__address .contactinfo__address--row a i {
   margin: 3%;
 }
 
