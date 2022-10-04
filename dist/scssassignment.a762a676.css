@@ -27,6 +27,7 @@ html, body {
 .top-nav {
   color: #fff;
   height: 7.5vh;
+  width: 100%;
   background: #ffffff1a;
   flex-direction: row;
   justify-content: space-between;
@@ -37,7 +38,7 @@ html, body {
 
 @media screen and (min-width: 768px) {
   .top-nav {
-    display: none;
+    background: none;
   }
 }
 
@@ -71,6 +72,12 @@ html, body {
   align-items: center;
   margin-right: 2%;
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button-container {
+    display: none;
+  }
 }
 
 #menu-toggle {
@@ -200,38 +207,25 @@ html, body {
     align-items: center;
     display: flex;
   }
-}
 
-.startpage-container header .navbar {
-  width: 100vw;
-}
-
-.startpage-container header .navbar ul {
-  padding: 3%;
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .startpage-container header .navbar ul {
-    display: unset;
+  .startpage-container header ul {
     flex-direction: row;
     justify-content: flex-end;
     display: flex;
   }
 
-  .startpage-container header .navbar ul li {
-    padding: 1%;
+  .startpage-container header ul li {
     list-style: none;
   }
 
-  .startpage-container header .navbar ul li a {
+  .startpage-container header ul li a {
     color: #fff;
     border-bottom: 2px solid #0000;
     text-decoration: none;
     transition: border .2s;
   }
 
-  .startpage-container header .navbar ul li a:hover {
+  .startpage-container header ul li a:hover {
     cursor: pointer;
     border-color: #fff;
   }
