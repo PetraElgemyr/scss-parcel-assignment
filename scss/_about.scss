@@ -1,0 +1,53 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.aboutus {
+    background-color: v.$secondary;
+    width: 100vw;
+    @include m.centering;
+    
+    .team {
+        @include m.centering;
+        @include m.tablet {
+            flex-direction: row;        
+            flex-wrap: wrap;
+        }
+        
+        .teammember {
+            @include m.centering; 
+            padding: 5%;
+            @include m.tablet {
+                width: 50%;
+                padding: 2%;
+            }
+        }
+
+            .teammember__description {
+                background-color: lightgray;
+                border-radius:5px ;
+                padding: 10%;
+                margin: 5%;
+                font-size: 0.9rem;
+                text-align:justify;
+                @include m.deskop {
+                    font-size: 1rem;
+                }
+
+                .fa-quote-right {
+                    font-size: 2rem;
+                    display: inline;
+                    @include m.deskop {
+                        font-size: 2.3rem;
+                    }
+                }
+            }
+        }
+        .btn {
+            @include m.arrow-box;
+            .fa-circle-down {
+                @include m.arrow; 
+                color: v.$primary;
+            }
+        }
+    }
+

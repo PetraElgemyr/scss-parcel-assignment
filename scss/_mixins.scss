@@ -1,0 +1,52 @@
+@use "variables" as v;
+
+@mixin tablet {
+	@media screen and (min-width:768px) {
+	@content;
+}
+}
+
+@mixin deskop {
+	@media screen and (min-width:1200px) {
+	@content;
+}
+}
+
+
+@mixin centering {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@mixin picture {
+    width:65%;
+    border-radius: 50%;   
+    box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.3);
+    margin: 5%;
+    //, 0 4px 4px 0 rgba(0, 0, 0, 0.2);    
+}
+
+@mixin arrow-box {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin arrow {
+    font-size: 1.2rem;
+    color: v.$secondary;
+    
+    &:hover {
+        cursor: pointer;
+      }
+}
+
+@mixin headline {
+    font-size: 1.5rem;
+    margin: 7%;
+}

@@ -1,0 +1,46 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.lastpage {
+    width: 100vw;
+    background-color: v.$primary;
+    color: v.$secondary;
+
+
+    .contactinfo {
+        @include m.centering;
+        width: 100vw;
+        padding: 10%;
+        @include m.tablet {
+            flex-direction: row;
+            height: 25vh;
+        }
+        @include m.deskop {
+            height: 15vh;
+        }
+
+        section.contactinfo__address {
+            width: 60vw;
+            text-align: left;
+            margin: 5%;
+            @include m.tablet {
+                height: 10vh;
+                padding: 0;
+                margin-bottom: 10%;
+            }
+
+            .contactinfo__address--row {
+                margin: 3%;
+
+                a {
+                    text-decoration: none;      
+                    color: v.$secondary;
+
+                    i {
+                        margin: 3%;
+                    }
+                }
+            }
+        }
+    }
+}
