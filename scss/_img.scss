@@ -2,8 +2,9 @@
 
 .image {
     @include m.picture;
+    
     @include m.tablet {
-        width: 55%;
+        width: 50%;
     
     }
 }

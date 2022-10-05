@@ -17,11 +17,10 @@
             flex-direction: row;
             justify-content: flex-end;
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: v.$nav-color;
             } 
             
             ul {
-
                 @include m.tablet {
                     display: flex;
                     flex-direction: row;
@@ -36,7 +35,7 @@
                             border-bottom: 2px solid rgba(255, 255, 255, 0);
                             
                             &:hover {
-                                border-color:rgb(255, 255, 255);
+                                border-color:v.$secondary;
                                 cursor: pointer;
                             }
                         }
