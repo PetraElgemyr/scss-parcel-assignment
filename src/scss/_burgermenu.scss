@@ -22,10 +22,13 @@
 
 .menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  @include m.tablet {
+    flex-direction: row;
+  }
 }
 
 .menu > .menu__row {
@@ -112,7 +115,7 @@
   transform: rotate(-405deg);
 }
 
-@media (max-width:  768px) {
+@media screen and (max-width: 768px) {
   .menu-button-container {
     display: flex;
   }
