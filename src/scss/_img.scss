@@ -1,9 +1,8 @@
 @use "mixins" as m;
 
 .image {
-    @include m.picture;
-    
-    @include m.tablet {
-        width: 50%;
-    }
+  @include m.picture;
+  @include m.tablet {
+    width: 50%;
+  }
 }
